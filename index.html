@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Hanasta Andromeda Deihan — Proyek akhir RevoU Coding Camp Software Engineering. Dibangun dengan HTML5, CSS3, dan JavaScript murni.">
+  <title>Hanasta Andromeda Deihan — Portofolio | RevoU Coding Camp</title>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring">
+    <span id="cursor-label"></span>
+  </div>
+
+  <!-- Scroll Progress & Back to Top -->
+  <div class="progress" id="progress-bar"></div>
+  <button class="to-top" id="to-top" aria-label="Kembali ke atas">
+    <svg class="ic" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Site Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">Deihan<span>.</span>dev</a>
+
+      <nav class="main-nav" aria-label="Navigasi Utama">
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#skills" class="nav-link">Keahlian</a>
+        <a href="#portfolio" class="nav-link">Portofolio</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Ubah Tema">
+          <svg class="ic ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="ic ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Buka Menu Mobile">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#hero" class="m-link"><small>01</small> Beranda</a>
+    <a href="#about" class="m-link"><small>02</small> Tentang</a>
+    <a href="#skills" class="m-link"><small>03</small> Keahlian</a>
+    <a href="#portfolio" class="m-link"><small>04</small> Portofolio</a>
+    <a href="#contact" class="m-link"><small>05</small> Kontak</a>
+
+    <div class="menu-meta">
+      <span>RevoU Coding Camp SE</span>
+      <span>Batch 24 Agustus 2026</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="cross c1"></div><div class="cross c2"></div>
+      <div class="cross c3"></div><div class="cross c4"></div>
+
+      <div class="container">
+        <p class="hero-hello">
+          <b>// 01</b> Halo Semua, Saya
+        </p>
+
+        <h1>
+          <span class="ltr">D</span><span class="ltr">e</span><span class="ltr"></span><span class="ltr">i</span><span class="ltr">H</span><span class="ltr">a</span><span class="ltr">n</span>
+          <span class="h1-outline"><span class="ltr">R</span><span class="ltr">e</span><span class="ltr">v</span><span class="ltr">o</span></span><span class="ltr">U</span>
+        </h1>
+
+        <p class="hero-type">
+          Software Engineer &amp; <span class="typed" id="typed-text"></span><span class="caret"></span>
+        </p>
+
+        <p class="hero-desc">
+          Peserta RevoU Coding Camp Software Engineering. Berfokus pada pembuatan antarmuka web modern, responsif, dan performa tinggi dengan HTML5, CSS3, dan JavaScript murni.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">
+            Lihat Project
+            <svg class="ic" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <b>5<i>+</i></b>
+            <span>Hari Coding Camp</span>
+          </div>
+          <div class="stat">
+            <b>100<i>%</i></b>
+            <span>Vanilla Stack</span>
+          </div>
+          <div class="stat">
+            <b>100<i>%</i></b>
+            <span>Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-badge">
+        <svg viewBox="0 0 100 100">
+          <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
+          <text><textPath href="#circlePath">REVOU SOFTWARE ENGINEERING CAMP • 2026 •</textPath></text>
+        </svg>
+        <div class="badge-arrow">↓</div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>SCROLL DOWN</span>
+      </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="marquee">
+      <div class="mq-track">
+        <div class="mq-group">
+          <span>Semantic HTML5</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>CSS3 &amp; Flexbox/Grid</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Vanilla JavaScript (ES6+)</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>DOM Manipulation</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Regex Validation</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="mq-group">
+          <span>Semantic HTML5</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>CSS3 &amp; Flexbox/Grid</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Vanilla JavaScript (ES6+)</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>DOM Manipulation</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Regex Validation</span><svg class="ic" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="sec-label">Tentang Saya</span>
+          <h2 class="sec-title">Membangun Aplikasi Web <em>Bersih &amp; Interaktif</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="code-card-wrap reveal">
+            <div class="sticker">REVOU SE 2026</div>
+            <div class="code-card">
+              <div class="code-bar">
+                <span class="dot r"></span>
+                <span class="dot y"></span>
+                <span class="dot g"></span>
+                <em>developer.json</em>
+              </div>
+              <pre class="code-body"><code>{
+  <span class="c-prop">"nama"</span><span class="c-pun">:</span> <span class="c-str">"Hanasta Andromeda Deihan"</span><span class="c-pun">,</span>
+  <span class="c-prop">"role"</span><span class="c-pun">:</span> <span class="c-str">"Junior Software Engineer"</span><span class="c-pun">,</span>
+  <span class="c-prop">"program"</span><span class="c-pun">:</span> <span class="c-str">"RevoU Coding Camp"</span><span class="c-pun">,</span>
+  <span class="c-prop">"fokus"</span><span class="c-pun">:</span> <span class="c-pun">[</span><span class="c-str">"Frontend"</span><span class="c-pun">,</span> <span class="c-str">"Clean Code"</span><span class="c-pun">]</span><span class="c-pun">,</span>
+  <span class="c-prop">"siapKerja"</span><span class="c-pun">:</span> <span class="c-key">true</span>
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="about-text reveal" data-delay="1">
+            <p class="about-lead">
+              Saya adalah seorang <mark>Software Engineering enthusiast</mark> yang berfokus pada pengembangan web modern berbasis standar industri.
+            </p>
+            <p>
+              Selama mengikuti 5 hari intensif di RevoU Coding Camp, saya mendalami aspek penting pembuatan produk web mulai dari penyusunan struktur HTML5 yang inklusif, styling berbasis CSS layout modern, hingga manipulasi DOM serta validasi form tingkat lanjut dengan JavaScript murni.
+            </p>
+            <blockquote class="about-quote">
+              "Koding bukan sekadar membuat program berjalan, tapi menulis solusi yang elegan, cepat, dan mudah dipahami manusia."
+            </blockquote>
+
+            <!-- Journey Tabs -->
+            <div class="journey">
+              <h3>
+                <svg class="ic" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Perjalanan 5 Hari Coding Camp
+              </h3>
+
+              <div class="day-tabs" role="tablist">
+                <button class="day-tab active" data-day="1" role="tab">Hari 1</button>
+                <button class="day-tab" data-day="2" role="tab">Hari 2</button>
+                <button class="day-tab" data-day="3" role="tab">Hari 3</button>
+                <button class="day-tab" data-day="4" role="tab">Hari 4</button>
+                <button class="day-tab" data-day="5" role="tab">Hari 5</button>
+              </div>
+
+              <div class="day-panel">
+                <div class="day-inner show" id="day-content">
+                  <!-- JS mengisi konten tab secara dinamis -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="sec-label">Keahlian Teknis</span>
+          <h2 class="sec-title">Teknologi &amp; <em>Kemampuan Utama</em></h2>
+          <p class="skills-note">
+            <svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Klik pada baris keahlian untuk melihat detail materi yang dikuasai.
+          </p>
+        </div>
+
+        <div class="skill-list reveal">
+          <!-- Skill 1 -->
+          <div class="skill-item">
+            <button class="skill-head" aria-expanded="false">
+              <span class="skill-idx">01</span>
+              <span class="skill-name">HTML5 &amp; Semantic Web</span>
+              <div class="skill-meta">
+                <div class="skill-seg">
+                  <span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span>
+                </div>
+                <span class="skill-lvl">Lanjutan</span>
+              </div>
+              <div class="skill-plus"><svg class="ic" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </button>
+            <div class="skill-body">
+              <div class="skill-body-in">
+                <p>Penyusunan hirarki dokumen web yang ramah SEO dan aksesibel (WAI-ARIA). Mampu mengimplementasikan elemen semantik secara tepat tanpa redundant div tag.</p>
+                <div class="chips">
+                  <span class="chip">Semantic Tags</span>
+                  <span class="chip">Accessibility (a11y)</span>
+                  <span class="chip">SEO Best Practices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-item">
+            <button class="skill-head" aria-expanded="false">
+              <span class="skill-idx">02</span>
+              <span class="skill-name">CSS3 Layout &amp; Responsive</span>
+              <div class="skill-meta">
+                <div class="skill-seg">
+                  <span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg"></span>
+                </div>
+                <span class="skill-lvl">Menengah+</span>
+              </div>
+              <div class="skill-plus"><svg class="ic" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </button>
+            <div class="skill-body">
+              <div class="skill-body-in">
+                <p>Penguasaan Flexbox, CSS Grid, CSS Variables, animasi, dan Media Queries dengan pendekatan Mobile-First untuk performa tampilan sempurna di segala ukuran layar.</p>
+                <div class="chips">
+                  <span class="chip">Mobile-First</span>
+                  <span class="chip">Flexbox &amp; Grid</span>
+                  <span class="chip">CSS Variables</span>
+                  <span class="chip">Animations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-item">
+            <button class="skill-head" aria-expanded="false">
+              <span class="skill-idx">03</span>
+              <span class="skill-name">JavaScript &amp; DOM Manipulation</span>
+              <div class="skill-meta">
+                <div class="skill-seg">
+                  <span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg"></span>
+                </div>
+                <span class="skill-lvl">Menengah+</span>
+              </div>
+              <div class="skill-plus"><svg class="ic" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            </button>
+            <div class="skill-body">
+              <div class="skill-body-in">
+                <p>Logika pemrograman interaktif berbasis ES6+, manipulasi elemen DOM dinamis, penanganan Event Listeners, Async/Fetch, dan regex validation.</p>
+                <div class="chips">
+                  <span class="chip">ES6+ Syntax</span>
+                  <span class="chip">Event Handling</span>
+                  <span class="chip">Regex Validation</span>
+                  <span class="chip">DOM API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools-row reveal">
+          <b>Tools &amp; Workflow:</b>
+          <span class="chip">VS Code</span>
+          <span class="chip">Git &amp; GitHub</span>
+          <span class="chip">GitHub Pages</span>
+          <span class="chip">AI Assistant / Agentic AI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="sec-label">Proyek Pilihan</span>
+          <h2 class="sec-title">Karya &amp; <em>Hasil Akhir</em></h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="web">Web Design</button>
+          <button class="filter-btn" data-filter="js">JS Apps</button>
+        </div>
+        <p class="filter-count reveal" id="filter-count">Menampilkan 3 dari 3 project</p>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid reveal">
+          <!-- Card 1 -->
+          <article class="p-card span-7" data-cat="web js" data-project="1">
+            <div class="p-media">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Preview Personal Portfolio">
+              <span class="p-year">2026</span>
+            </div>
+            <div class="p-body">
+              <div class="p-top">
+                <h3>Personal Interactive Portfolio</h3>
+                <span class="p-num">01</span>
+              </div>
+              <p>Proyek akhir RevoU SE Camp dengan integrasi mode gelap/terang, validasi regex, dan kursor interaktif.</p>
+              <div class="p-foot">
+                <div class="chips">
+                  <span class="chip">HTML5</span>
+                  <span class="chip">CSS3</span>
+                  <span class="chip">JS ES6</span>
+                </div>
+                <span class="p-open">Detail Project →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="p-card span-5" data-cat="js" data-project="2">
+            <div class="p-media">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Preview Task Manager">
+              <span class="p-year">2026</span>
+            </div>
+            <div class="p-body">
+              <div class="p-top">
+                <h3>Task Manager Web App</h3>
+                <span class="p-num">02</span>
+              </div>
+              <p>Aplikasi manajemen tugas harian berbasis browser menggunakan DOM Manipulation &amp; LocalStorage.</p>
+              <div class="p-foot">
+                <div class="chips">
+                  <span class="chip">DOM</span>
+                  <span class="chip">LocalStorage</span>
+                </div>
+                <span class="p-open">Detail Project →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="p-card span-12" data-cat="web" data-project="3">
+            <div class="p-media">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Preview Landing Page">
+              <span class="p-year">2026</span>
+            </div>
+            <div class="p-body">
+              <div class="p-top">
+                <h3>SaaS Product Landing Page</h3>
+                <span class="p-num">03</span>
+              </div>
+              <p>Landing page modern dengan tipografi berani, animasi scroll CSS, dan struktur layout responsif.</p>
+              <div class="p-foot">
+                <div class="chips">
+                  <span class="chip">Responsive</span>
+                  <span class="chip">CSS Grid</span>
+                </div>
+                <span class="p-open">Detail Project →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="sec-label">Hubungi Saya</span>
+          <h2 class="sec-title">Mari Bekerja Sama &amp; <em>Diskusi Proyek</em></h2>
+        </div>
+
+        <div class="contact-wrap reveal">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda">
+              <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Alamat Email</label>
+              <input type="email" id="email" name="email" placeholder="contoh@domain.com">
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Pesan Anda</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan atau penawaran proyek Anda..."></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              Kirim Pesan Sekarang
+              <svg class="ic" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+
+            <div id="form-success" class="success-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Detail Project -->
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Tutup Modal">✕</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="Project Detail">
+      </div>
+      <div class="modal-body">
+        <span class="modal-kicker" id="modal-kicker">DETAIL PROJECT</span>
+        <h3 id="modal-title">Judul Project</h3>
+        <p class="modal-meta" id="modal-meta">Teknologi Used</p>
+        <p class="modal-desc" id="modal-desc">Deskripsi proyek akan tampil di sini secara dinamis.</p>
+
+        <ul class="modal-list" id="modal-features">
+          <!-- Diisi via JS -->
+        </ul>
+
+        <div class="modal-actions">
+          <a href="#" class="btn btn-primary" id="modal-demo" target="_blank" rel="noopener">Live Demo</a>
+          <a href="#" class="btn btn-ghost" id="modal-repo" target="_blank" rel="noopener">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="logo">Deihan<span>.</span>dev</a>
+        <p>&copy; 2026 Hanasta Andromeda Deihan. Dibuat untuk RevoU Mini Coding Project Software Engineering.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Script -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
