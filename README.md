@@ -6,8 +6,8 @@ Website portofolio interaktif yang dibangun sebagai tugas akhir (**Mini Coding P
 
 ## 🚀 Live Demo
 
-- **URL Deployment**: [https://username.github.io/revou-mini-project/](https://username.github.io/revou-mini-project/)
-- **Repository GitHub**: [https://github.com/username/revou-mini-project](https://github.com/username/revou-mini-project)
+- **URL Deployment**: [https://username.github.io/CodingCamp-24August26-Deihan/]
+- **Repository GitHub**: [https://github.com/Deihan-had/CodingCamp-24August26-Deihan]
 
 ---
 
