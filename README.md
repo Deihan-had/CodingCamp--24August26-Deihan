@@ -6,8 +6,8 @@ Website portofolio interaktif yang dibangun sebagai tugas akhir (**Mini Coding P
 
 ## 🚀 Live Demo
 
-- **URL Deployment**: [https://Deihan-had.github.io/CodingCamp-24August26-Deihan/]
-- **Repository GitHub**: [https://github.com/Deihan-had/CodingCamp-24August26-Deihan]
+- **URL Deployment**: [https://deihan-had.github.io/CodingCamp--24August26-Deihan/]
+- **Repository GitHub**: [https://github.com/Deihan-had/CodingCamp--24August26-Deihan]
 
 ---
 
